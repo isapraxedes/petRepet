@@ -1,0 +1,31 @@
+<%- model_class = Pet -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nome) %>:</strong></dt>
+  <dd><%= @pet.nome %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idade) %>:</strong></dt>
+  <dd><%= @pet.idade %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cidade) %>:</strong></dt>
+  <dd><%= @pet.cidade %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:uf) %>:</strong></dt>
+  <dd><%= @pet.uf %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:images) %>:</strong></dt>
+  <dd><%= image_tag(@pet.images_url, width: 600) if @pet.images.present? %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sexo) %>:</strong></dt>
+  <dd><%= @pet.sexo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:especie) %>:</strong></dt>
+  <dd><%= @pet.especie %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              pets_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_pet_path(@pet), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              pet_path(@pet),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

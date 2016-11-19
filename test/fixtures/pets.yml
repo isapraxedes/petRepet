@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  idade: 
+  cidade: MyString
+  uf: MyString
+  images: MyString
+  sexo: 
+  especie: 
+
+two:
+  nome: MyString
+  idade: 
+  cidade: MyString
+  uf: MyString
+  images: MyString
+  sexo: 
+  especie: 
