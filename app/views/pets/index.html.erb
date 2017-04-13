@@ -23,8 +23,8 @@
         <td><%= pet.idade %></td>
         <td><%= pet.cidade %></td>
         <td><%= pet.uf %></td>
-        <td><%= pet.sexo %></td>
-        <td><%= pet.especie %></td>
+        <td><%= pet.sexo.humanize  %></td>
+        <td><%= pet.especie.humanize %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_pet_path(pet), :class => 'btn btn-default btn-xs' %>

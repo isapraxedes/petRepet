@@ -7,6 +7,10 @@ class PetsController < ApplicationController
     @pets = Pet.all
   end
 
+  def lista
+    @pets = Pet.all
+  end
+
   # GET /pets/1
   # GET /pets/1.json
   def show
